@@ -11,7 +11,7 @@ Some notes about Data Structures.
     * Declare & Define
     * Initialize
     * Access
-    * Arrays of Struct
+    * Array of Structs
     * Typedef
   
 ---
