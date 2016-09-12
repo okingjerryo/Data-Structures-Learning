@@ -103,15 +103,15 @@ Or define the struct directly when it be declared.
     struct labtop
     {
       char name[20];
-        int price;
+      int price;
     }Macintoss;
  
  Also a struct can be defined without the name of struct declared.
   
     struct
     {
-        char name[20];
-        int price;
+      char name[20];
+      int price;
     }Macintoss;
 
 ### typedef
@@ -146,8 +146,8 @@ When it is added `typedef` statement, the code can be written easiler and more c
 
     typedef struct student
     {
-        int majorNum;
-        int classNum;
+      int majorNum;
+      int classNum;
     }stu;
     
     stu /* some statement here... */;
