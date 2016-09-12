@@ -3,8 +3,8 @@ Some notes about Data Structures.
 
 ---
 #0x00 C++
-### Reference
-#### Basic Data Types
+## Reference
+### Basic Data Types
     #include <iostream>
     using namespace std;
     int main(void)
@@ -17,7 +17,7 @@ Some notes about Data Structures.
       return 0;
     }
 
-#### Struct
+### Struct
     #include <iostream>
     using namespace std;
     
@@ -37,7 +37,7 @@ Some notes about Data Structures.
       return 0;
     }
     
-#### Point
+### Point
     #include <iostream>
     using namespace std;
     int main(void)
@@ -50,7 +50,7 @@ Some notes about Data Structures.
       return 0;
     }
     
-#### Parameters in Functions
+### Parameters in Functions
 Code of function:
     
     void changeNum(int &a, int &b)
