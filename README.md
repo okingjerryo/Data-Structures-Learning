@@ -65,3 +65,42 @@ Use the function:
     
     int x = 1, y = 2;
     changeNum(x, y);
+
+## Struct
+### typedef
+`typedef` is a reserved keyword which is used to create an alias for a data type. `typedef` statement must be terminated with a semicolon (`;`).
+    
+    typedef int integer
+    integer a = 1;
+
+It's the same as the code
+
+    int a = 1;
+    
+In the situation:
+
+    typedef  int *p
+
+It creates an alias for `int *` called `p`. Therefore, when a new point is defined, the code can be written as below
+
+    p q = NULL; // int *q = NULL
+    
+After creating a new struct type, the new struct type can be used as following
+    
+    struct student
+    {
+        int majorNum;
+        int classNum;
+    };
+    
+    struct student /* some statement here... */;
+    
+When it is added `typedef` statement, the code can be written easiler and more clear as
+
+    typedef struct student
+    {
+        int majorNum;
+        int classNum;
+    }stu;
+    
+    stu /* some statement here... */;
