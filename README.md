@@ -9,6 +9,9 @@ Some notes about Data Structures.
     * Parameters in Function
   * Struct
     * Declare & Define
+    * Initialize
+    * Access
+    * Arrays of Struct
     * Typedef
   
 ---
@@ -114,6 +117,23 @@ Or define the struct directly when it be declared.
       char name[20];
       int price;
     }Macintoss;
+
+### Initialize
+
+Use a pair of curly braces to surround the values and the values will be assigned to the struct variables in order.
+
+    struct labtop Macintoss = {"Macintoss Alpha", 50};
+
+### Access
+
+The struct variable can be accessed with `.`
+
+    printf("%s\n", Macintoss.name);
+
+### Array of Structs
+
+    struct labtop macintossGroup[2] = {{"Macintoss Alpha", 50}, {"Macintoss Beta", 100}};
+    printf("%s\n%s\n",macintossGroup[0].name,macintossGroup[1].price);
 
 ### Typedef
 `typedef` is a reserved keyword which is used to create an alias for a data type. `typedef` statement must be terminated with a semicolon (`;`).
