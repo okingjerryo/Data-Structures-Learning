@@ -8,7 +8,8 @@ Some notes about Data Structures.
     * Point
     * Parameters in Function
   * Struct
-    * typedef
+    * Declare & Define
+    * Typedef
   
 ---
 #0x00 C++
@@ -114,7 +115,7 @@ Or define the struct directly when it be declared.
       int price;
     }Macintoss;
 
-### typedef
+### Typedef
 `typedef` is a reserved keyword which is used to create an alias for a data type. `typedef` statement must be terminated with a semicolon (`;`).
     
     typedef int integer
