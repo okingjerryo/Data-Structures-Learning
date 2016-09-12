@@ -87,31 +87,31 @@ A struct is an aggregate of elements of arbitrary types.
 
 For example, the code below creates a struct describing a labtop:
 
- struct labtop
- {
-  char name[20];
-  int price;
- };
+  struct labtop
+  {
+   char name[20];
+   int price;
+  };
 
 Then we used the struct declared above to define a struct
   
- struct labtop Macintoss;
+  struct labtop Macintoss;
  
 Or define the struct directly when it be declared.
 
- struct labtop
- {
-  char name[20];
-  int price;
- }Macintoss;
+  struct labtop
+  {
+   char name[20];
+   int price;
+  }Macintoss;
  
  Also a struct can be defined without the name of struct declared.
- 
-  struct
- {
-  char name[20];
-  int price;
- }Macintoss;
+  
+   struct
+  {
+   char name[20];
+   int price;
+  }Macintoss;
 
 ### typedef
 `typedef` is a reserved keyword which is used to create an alias for a data type. `typedef` statement must be terminated with a semicolon (`;`).
