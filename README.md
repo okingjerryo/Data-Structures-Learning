@@ -12,6 +12,7 @@ Some notes about Data Structures.
     * Initialize
     * Access
     * Array of Structs
+    * Point
     * Typedef
   
 ---
