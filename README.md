@@ -141,7 +141,18 @@ The struct variable can be accessed with `.`
     m = &Macintoss
     printf("name = %s\n",(*m).name);
 
-Attention: The braces of `(*m)` can not be omitted in that dot operator (`.`) keeps a high priority
+Or with the operator `->`
+
+    printf("name = %s", m->name);
+
+Attention: The braces of `(*m)` can not be omitted in that dot operator (`.`) keeps a high priority!
+
+    struct labtop *M
+    M = macintossGroup; // M->name macintossGroup[0].name
+    printf("%s\n", M->name) // It will access the first element of the array.
+    
+    p++; 
+    printf("%s\n", M->name) // It will access macintossGroup[1], just like "macintossGroup + 1"
 
 ### Typedef
 `typedef` is a reserved keyword which is used to create an alias for a data type. `typedef` statement must be terminated with a semicolon (`;`).
@@ -165,8 +176,8 @@ After creating a new struct type, the new struct type can be used as following
     
     struct student
     {
-        int majorNum;
-        int classNum;
+      int majorNum;
+      int classNum;
     };
     
     struct student /* some statement here... */;
