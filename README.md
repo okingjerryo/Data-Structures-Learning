@@ -1,14 +1,14 @@
 # Data-Structures-Learning
 Some notes about Data Structures.
 
--C++
-  -Reference
-    -Basic Data Types
-    -Struct
-    -Point
-    -Parameters in Function
-  -Struct
-    -typedef
+* C++
+  * Reference
+    * Basic Data Types
+    * Struct
+    * Point
+    * Parameters in Function
+  * Struct
+    * typedef
   
 ---
 #0x00 C++
