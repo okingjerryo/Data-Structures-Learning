@@ -135,6 +135,14 @@ The struct variable can be accessed with `.`
     struct labtop macintossGroup[2] = {{"Macintoss Alpha", 50}, {"Macintoss Beta", 100}};
     printf("%s\n%s\n",macintossGroup[0].name,macintossGroup[1].price);
 
+###Point
+    
+    struct labtop *m
+    m = &Macintoss
+    printf("name = %s\n",(*m).name);
+
+Attention: The braces of `(*m)` can not be omitted in that dot operator (`.`) keeps a high priority
+
 ### Typedef
 `typedef` is a reserved keyword which is used to create an alias for a data type. `typedef` statement must be terminated with a semicolon (`;`).
     
