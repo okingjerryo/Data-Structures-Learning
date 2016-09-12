@@ -1,6 +1,15 @@
 # Data-Structures-Learning
 Some notes about Data Structures.
 
+C++
+  *Reference
+    *Basic Data Types
+    *Struct
+    *Point
+    *Parameters in Function
+  *Struct
+    *typedef
+  
 ---
 #0x00 C++
 ## Reference
@@ -50,7 +59,7 @@ Some notes about Data Structures.
       return 0;
     }
     
-### Parameters in Functions
+### Parameters in Function
 Code of function:
     
     void changeNum(int &a, int &b)
