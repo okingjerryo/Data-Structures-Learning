@@ -52,6 +52,7 @@ Some notes about Data Structures.
     
 #### Parameters in Functions
 Code of function:
+    
     void changeNum(int &a, int &b)
     {
       int c = 0
@@ -59,6 +60,8 @@ Code of function:
       a = b;
       b = c;
     }
+    
 Use the function:
+    
     int x = 1, y = 2;
     changeNum(x, y);
