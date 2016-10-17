@@ -14,6 +14,9 @@ Some notes about Data Structures.
     * Array of Structs
     * Point
     * Typedef
+* Data Structure
+  * Linear List
+    * 
   
 ---
 #0x00 C++
@@ -23,12 +26,12 @@ Some notes about Data Structures.
     using namespace std;
     int main(void)
     {
-      int a = 1;
-      int &b = a;
+        int a = 1;
+        int &b = a;
     
-      b = 2
-      cout << a << endl;
-      return 0;
+        b = 2
+        cout << a << endl;
+        return 0;
     }
 
 ### Struct
@@ -37,18 +40,18 @@ Some notes about Data Structures.
     
     typedef struct
     {
-      int x;
-      int y;
+        int x;
+        int y;
     }Book
     
     int main(void)
     {
-      Book A;
-      Book &B = A;
-      B.x = 1;
-      B.y = 2;
-      cout<< A.x << A.y << endl;
-      return 0;
+        Book A;
+        Book &B = A;
+        B.x = 1;
+        B.y = 2;
+        cout<< A.x << A.y << endl;
+        return 0;
     }
     
 ### Point
@@ -56,12 +59,12 @@ Some notes about Data Structures.
     using namespace std;
     int main(void)
     {
-      int x = 1;
-      int *p = &x;
-      int *&q =p;
-      *q = 2;
-      cout << x << endl;
-      return 0;
+        int x = 1;
+        int *p = &x;
+        int *&q =p;
+        *q = 2;
+        cout << x << endl;
+        return 0;
     }
     
 ### Parameters in Function
@@ -69,10 +72,10 @@ Code of function:
     
     void changeNum(int &a, int &b)
     {
-      int c = 0
-      c = a;
-      a = b;
-      b = c;
+        int c = 0
+        c = a;
+        a = b;
+        b = c;
     }
     
 Use the function:
@@ -88,15 +91,15 @@ A struct is an aggregate of elements of arbitrary types.
 
     struct NameOfStruct
     {
-      /* Arbitrary data types can be added here */
+        /* Arbitrary data types can be added here */
     }
 
 For example, the code below creates a struct describing a labtop:
 
     struct labtop
     {
-      char name[20];
-      int price;
+        char name[20];
+        int price;
     };
 
 Then we used the struct declared above to define a struct
@@ -107,16 +110,16 @@ Or define the struct directly when it be declared.
 
     struct labtop
     {
-      char name[20];
-      int price;
+        char name[20];
+        int price;
     }Macintoss;
  
  Also a struct can be defined without the name of struct declared.
   
     struct
     {
-      char name[20];
-      int price;
+        char name[20];
+        int price;
     }Macintoss;
 
 ### Initialize
@@ -177,8 +180,8 @@ After creating a new struct type, the new struct type can be used as following
     
     struct student
     {
-      int majorNum;
-      int classNum;
+        int majorNum;
+        int classNum;
     };
     
     struct student /* some statement here... */;
@@ -187,9 +190,8 @@ When it is added `typedef` statement, the code can be written easiler and more c
 
     typedef struct student
     {
-      int majorNum;
-      int classNum;
+        int majorNum;
+        int classNum;
     }stu;
     
     stu /* some statement here... */;
-
