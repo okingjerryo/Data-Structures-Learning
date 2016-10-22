@@ -201,30 +201,52 @@ int main()
     printf("---------------------------------\n");
     
     int cmd;
-    LinkList List = NULL;  // Attention: Remember to set initial status!
+    LinkList List = NULL; //Atention: Remember to set initial status!
     while(scanf("%d",&cmd))
     {
         if (cmd == 1)
-            List = InitLinkList();
-        else if (cmd == 2)
-            ListInsertHead(List);
-        else if (cmd == 3)
-            ListInsertTail(List);
-        else if (cmd == 4)
-            ListTraverse(List);
-        else if (cmd == 5)
         {
-            if(ListReverse(List) != ERROR)
-                ListTraverse(List);
+            List = InitLinkList();
+            while (scanf("%d",&cmd))
+            {
+                if (cmd == 1)
+                {
+                    printf("You have initialized the list just now!\n");
+                }
+                else if (cmd == 2)
+                {
+                    ListInsertHead(List);
+                }
+                else if (cmd == 3)
+                {
+                    ListInsertTail(List);
+                }
+                else if (cmd ==4)
+                {
+                    ListTraverse(List);
+                }
+                else if (cmd ==5)
+                {
+                    if (ListReverse(List)!=ERROR)
+                    {
+                        ListTraverse(List);
+                    }
+                }
+                else if (cmd == 6)
+                {
+                    DestoryList(List);
+                    break;
+                }
+                else
+                {
+                    printf("Excuse me? :(\n");
+                }
+            }
         }
-        else if (cmd == 6)
-            DestoryList(List);
         else
         {
-            printf("Excuse me? :(\n");
+            printf("Excuse me? :(\nPlease initialize the list at first.\n");
         }
     }
     printf("\n");
-    
-    
 }
