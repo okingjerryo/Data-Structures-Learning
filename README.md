@@ -1,27 +1,24 @@
 # Data-Structures-Learning
-Some notes about Data Structures.
+Basic Notes about C/C++ and Data Structure course.
 
-* C++
-  * Reference
-    * Basic Data Types
-    * Struct
-    * Point
-    * Parameters in Function
-  * Struct
-    * Declare & Define
-    * Initialize
-    * Access
-    * Array of Structs
-    * Point
-    * Typedef
-* Data Structure
-  * Linear List
-    * 
+* C/C++ 
+  * [Reference](#Reference)
+    * [Basic Data Types](#Basic_Data_Types)
+    * [Struct](#Struct)
+    * [Pointer](#Pointer)
+    * [Parameters in Function](#Parameters_in_Function)
+  * [Struct](#Struct)
+    * [Declare & Define](#Declare_and_Define)
+    * [Initialize](#Initialize)
+    * [Access](#Access)
+    * [Array of Structs](#Array_of_Structs)
+    * [Point](#)
+    * [Typedef](#Typedef)
   
 ---
-#0x00 C++
-## Reference
-### Basic Data Types
+<h2 id = "Reference">Reference</h2>
+<h3 id = "Basic_Data_Types">Basic Data Types</h3>
+
     #include <iostream>
     using namespace std;
     int main(void)
@@ -34,7 +31,8 @@ Some notes about Data Structures.
         return 0;
     }
 
-### Struct
+<h3 id = "Struct">Struct</h3>
+
     #include <iostream>
     using namespace std;
     
@@ -54,7 +52,8 @@ Some notes about Data Structures.
         return 0;
     }
     
-### Point
+<h3 id = "Pointer">Pointer</h3>
+
     #include <iostream>
     using namespace std;
     int main(void)
@@ -67,7 +66,7 @@ Some notes about Data Structures.
         return 0;
     }
     
-### Parameters in Function
+<h3 id = "Parameters_in_Function">Parameters in Function</h3>
 Code of function:
     
     void changeNum(int &a, int &b)
@@ -83,11 +82,11 @@ Use the function:
     int x = 1, y = 2;
     changeNum(x, y);
 
-## Struct
+<h2 id ="Struct">Struct</h2>
 
 A struct is an aggregate of elements of arbitrary types.
 
-### Declare & Define
+<h3 id = "Declare_and_Define">Declare & Define</h3>
 
     struct NameOfStruct
     {
@@ -104,7 +103,7 @@ For example, the code below creates a struct describing a labtop:
 
 Then we used the struct declared above to define a struct
 
-    struct labtop Macintoss;
+    struct labtop MacPad;
  
 Or define the struct directly when it be declared.
 
@@ -112,37 +111,37 @@ Or define the struct directly when it be declared.
     {
         char name[20];
         int price;
-    }Macintoss;
+    }MacPad;
  
- Also a struct can be defined without the name of struct declared.
+Also a struct can be defined without the name of struct declared.
   
     struct
     {
         char name[20];
         int price;
-    }Macintoss;
+    }MacPad;
 
-### Initialize
+<h3 id = "Initialize">Initialize</h3>
 
 Use a pair of curly braces to surround the values and the values will be assigned to the struct variables in order.
 
-    struct labtop Macintoss = {"Macintoss Alpha", 50};
+    struct labtop MacPad = {"MacPad Pro", 100};
 
-### Access
+<h3 id = "Access">Access</h3>
 
 The struct variable can be accessed with `.`
 
-    printf("%s\n", Macintoss.name);
+    printf("%s\n", MacPad.name);
 
-### Array of Structs
+<h3 id = "Array_of_Structs">Array of Structs</h3>
 
-    struct labtop macintossGroup[2] = {{"Macintoss Alpha", 50}, {"Macintoss Beta", 100}};
-    printf("%s\n%s\n",macintossGroup[0].name,macintossGroup[1].price);
+    struct labtop Labtops[2] = {{"MacPad Pro", 100}, {"ThinkBook", 200}};
+    printf("%s\n%s\n", Labtops[0].name, Labtops[1].price);
 
-###Point
+<h3 id ="Pointer">Pointer</h3>
     
     struct labtop *m
-    m = &Macintoss
+    m = &MacPad
     printf("name = %s\n",(*m).name);
 
 Or with the operator `->`
@@ -152,13 +151,13 @@ Or with the operator `->`
 Attention: The braces of `(*m)` can not be omitted in that dot operator (`.`) keeps a high priority!
 
     struct labtop *M
-    M = macintossGroup; // M->name macintossGroup[0].name
+    M = Labtops; // M->name Labtops[0].name
     printf("%s\n", M->name) // It will access the first element of the array.
     
     p++; 
-    printf("%s\n", M->name) // It will access macintossGroup[1], just like "macintossGroup + 1"
+    printf("%s\n", M->name) // It will access Labtops[1], just like "Labtops + 1"
 
-### Typedef
+<h3 id = "Typedef">Typedef</h3>
 `typedef` is a reserved keyword which is used to create an alias for a data type. `typedef` statement must be terminated with a semicolon (`;`).
     
     typedef int integer
