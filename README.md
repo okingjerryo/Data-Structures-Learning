@@ -148,10 +148,10 @@ Or with the operator `->`
 
     printf("name = %s", m->name);
 
-Attention: The braces of `(*m)` can not be omitted in that dot operator (`.`) keeps a high priority!
+**Attention**: The braces of `(*m)` can not be omitted in that dot operator (`.`) keeps a high priority!
 
     struct labtop *M
-    M = Labtops; // M->name Labtops[0].name
+    M = Labtops; // M->name == Labtops[0].name
     printf("%s\n", M->name) // It will access the first element of the array.
     
     p++; 
