@@ -9,7 +9,7 @@ Basic Notes about C/C++ and Data Structure course.
     * [Parameters in Function](#Parameters_in_Function)
   * [Struct](#Struct)
     * [Declare & Define](#Declare_and_Define)
-    * [Initialize](#Initialize)
+    * [Initialization](#Initialization)
     * [Access](#Access)
     * [Array of Structs](#Array_of_Structs)
     * [Point](#)
@@ -121,7 +121,7 @@ Also a struct can be defined without the name of struct declared.
         int price;
     }MacPad;
 
-<h3 id = "Initialize">Initialize</h3>
+<h3 id = "Initialization">Initialization</h3>
 
 Use a pair of curly braces to surround the values and the values will be assigned to the struct variables in order.
 
