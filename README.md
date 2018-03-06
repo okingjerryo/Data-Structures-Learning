@@ -1,78 +1,80 @@
 # Data-Structures-Learning
-Some notes about Data Structures.
+Basic Notes about C/C++ and Data Structure course.
 
-* C++
-  * Reference
-    * Basic Data Types
-    * Struct
-    * Point
-    * Parameters in Function
-  * Struct
-    * Declare & Define
-    * Initialize
-    * Access
-    * Array of Structs
-    * Point
-    * Typedef
+* C/C++ 
+  * [Reference](#Reference)
+    * [Basic Data Types](#Basic_Data_Types)
+    * [Struct](#Struct)
+    * [Pointer](#Pointer)
+    * [Parameters in Function](#Parameters_in_Function)
+  * [Struct](#Struct)
+    * [Declare & Define](#Declare_and_Define)
+    * [Initialization](#Initialization)
+    * [Access](#Access)
+    * [Array of Structs](#Array_of_Structs)
+    * [Point](#)
+    * [Typedef](#Typedef)
   
 ---
-#0x00 C++
-## Reference
-### Basic Data Types
+<h2 id = "Reference">Reference</h2>
+<h3 id = "Basic_Data_Types">Basic Data Types</h3>
+
     #include <iostream>
     using namespace std;
     int main(void)
     {
-      int a = 1;
-      int &b = a;
+        int a = 1;
+        int &b = a;
     
-      b = 2
-      cout << a << endl;
-      return 0;
+        b = 2
+        cout << a << endl;
+        return 0;
     }
 
-### Struct
+<h3 id = "Struct">Struct</h3>
+
     #include <iostream>
     using namespace std;
     
     typedef struct
     {
-      int x;
-      int y;
+        int x;
+        int y;
     }Book
     
     int main(void)
     {
-      Book A;
-      Book &B = A;
-      B.x = 1;
-      B.y = 2;
-      cout<< A.x << A.y << endl;
-      return 0;
+        Book A;
+        Book &B = A;
+        B.x = 1;
+        B.y = 2;
+        cout<< A.x << A.y << endl;
+        return 0;
     }
     
-### Point
+<h3 id = "Pointer">Pointer</h3>
+
     #include <iostream>
     using namespace std;
     int main(void)
     {
-      int x = 1;
-      int *p = &x;
-      int *&q =p;
-      *q = 2;
-      cout << x << endl;
-      return 0;
+        int x = 1;
+        int *p = &x;
+        int *&q =p;
+        *q = 2;
+        cout << x << endl;
+        return 0;
     }
     
-### Parameters in Function
+<h3 id = "Parameters_in_Function">Parameters in Function</h3>
 Code of function:
     
     void changeNum(int &a, int &b)
     {
-      int c = 0
-      c = a;
-      a = b;
-      b = c;
+        int c = 0
+        c = a;
+        a = b;
+        b = c;
     }
     
 Use the function:
@@ -80,82 +82,82 @@ Use the function:
     int x = 1, y = 2;
     changeNum(x, y);
 
-## Struct
+<h2 id ="Struct">Struct</h2>
 
 A struct is an aggregate of elements of arbitrary types.
 
-### Declare & Define
+<h3 id = "Declare_and_Define">Declare & Define</h3>
 
     struct NameOfStruct
     {
-      /* Arbitrary data types can be added here */
+        /* Arbitrary data types can be added here */
     }
 
 For example, the code below creates a struct describing a labtop:
 
     struct labtop
     {
-      char name[20];
-      int price;
+        char name[20];
+        int price;
     };
 
 Then we used the struct declared above to define a struct
 
-    struct labtop Macintoss;
+    struct labtop MacPad;
  
 Or define the struct directly when it be declared.
 
     struct labtop
     {
-      char name[20];
-      int price;
-    }Macintoss;
+        char name[20];
+        int price;
+    }MacPad;
  
- Also a struct can be defined without the name of struct declared.
+Also a struct can be defined without the name of struct declared.
   
     struct
     {
-      char name[20];
-      int price;
-    }Macintoss;
+        char name[20];
+        int price;
+    }MacPad;
 
-### Initialize
+<h3 id = "Initialization">Initialization</h3>
 
 Use a pair of curly braces to surround the values and the values will be assigned to the struct variables in order.
 
-    struct labtop Macintoss = {"Macintoss Alpha", 50};
+    struct labtop MacPad = {"MacPad Pro", 100};
 
-### Access
+<h3 id = "Access">Access</h3>
 
 The struct variable can be accessed with `.`
 
-    printf("%s\n", Macintoss.name);
+    printf("%s\n", MacPad.name);
 
-### Array of Structs
+<h3 id = "Array_of_Structs">Array of Structs</h3>
 
-    struct labtop macintossGroup[2] = {{"Macintoss Alpha", 50}, {"Macintoss Beta", 100}};
-    printf("%s\n%s\n",macintossGroup[0].name,macintossGroup[1].price);
+    struct labtop Labtops[2] = {{"MacPad Pro", 100}, {"ThinkBook", 200}};
+    printf("%s\n%s\n", Labtops[0].name, Labtops[1].price);
 
-###Point
+<h3 id ="Pointer">Pointer</h3>
     
     struct labtop *m
-    m = &Macintoss
+    m = &MacPad
     printf("name = %s\n",(*m).name);
 
 Or with the operator `->`
 
     printf("name = %s", m->name);
 
-Attention: The braces of `(*m)` can not be omitted in that dot operator (`.`) keeps a high priority!
+**Attention**: The braces of `(*m)` can not be omitted in that dot operator (`.`) keeps a high priority!
 
     struct labtop *M
-    M = macintossGroup; // M->name macintossGroup[0].name
+    M = Labtops; // M->name == Labtops[0].name
     printf("%s\n", M->name) // It will access the first element of the array.
     
     p++; 
-    printf("%s\n", M->name) // It will access macintossGroup[1], just like "macintossGroup + 1"
+    printf("%s\n", M->name) // It will access Labtops[1], just like "Labtops + 1"
 
-### Typedef
+<h3 id = "Typedef">Typedef</h3>
 `typedef` is a reserved keyword which is used to create an alias for a data type. `typedef` statement must be terminated with a semicolon (`;`).
     
     typedef int integer
@@ -177,8 +179,8 @@ After creating a new struct type, the new struct type can be used as following
     
     struct student
     {
-      int majorNum;
-      int classNum;
+        int majorNum;
+        int classNum;
     };
     
     struct student /* some statement here... */;
@@ -187,9 +189,8 @@ When it is added `typedef` statement, the code can be written easiler and more c
 
     typedef struct student
     {
-      int majorNum;
-      int classNum;
+        int majorNum;
+        int classNum;
     }stu;
     
     stu /* some statement here... */;
-
